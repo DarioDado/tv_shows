@@ -1,5 +1,5 @@
 var mainModule = (function (ui, data) {
-    
+
     const setEventListener = () => {
         const $cardHolderElement = $(ui.DOMSelectors.divShowHolder);
         const $inputElement = $(ui.DOMSelectors.inputSearch);
@@ -14,7 +14,7 @@ var mainModule = (function (ui, data) {
     const homeButtonHandler = event => {
         data.fetchShows(ui.displayShows,ui.displayError);
     }
-    
+
     const cardHandler = event => {
         ui.setLocalStorageShowId(event);
     }

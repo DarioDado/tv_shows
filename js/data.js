@@ -36,8 +36,8 @@ var dataModule = (function () {
             url: `http://api.tvmaze.com/shows/${id}?embed[]=seasons&embed[]=cast`
         })
             .done(res => {
-                const imageSrc = res.image 
-                    ? res.image.original 
+                const imageSrc = res.image
+                    ? res.image.original
                     : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjmhOQIdkehQclCNlvATZe4QCQoaBPRVftOSbW0E4xxnWmvc4r8Q";
                 const show = new Show(res.id, res.name, imageSrc);
                 show.summary = res.summary;
@@ -65,10 +65,10 @@ var dataModule = (function () {
         })
         .done(res => {
             const listShow = res.map(({ show }) => {
-                const imageSrc = show.image 
-                    ? show.image.original 
+                const imageSrc = show.image
+                    ? show.image.original
                     : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjmhOQIdkehQclCNlvATZe4QCQoaBPRVftOSbW0E4xxnWmvc4r8Q";
-                
+
                     return new Show(show.id, show.name, imageSrc );
             });
 

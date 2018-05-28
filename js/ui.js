@@ -1,5 +1,5 @@
 const uiModule = (function () {
-    
+
     const DOMSelectors = {
         divShowHolder: ".show-holder",
         divContainer: "main .container",
@@ -14,7 +14,7 @@ const uiModule = (function () {
         divAlertDanger: ".alert-danger",
         divAlertDark: ".alert-dark"
     };
-    
+
 
 
     const $searchResultElement = $(DOMSelectors.divSearchResult);
@@ -27,7 +27,7 @@ const uiModule = (function () {
     const $alert = $(DOMSelectors.divAlertDark);
 
 
-    
+
     const displayShows = listShows => {
         clearErrors();
         $showHolderElement.html("");
@@ -86,7 +86,7 @@ const uiModule = (function () {
     const displayShowInfo = ({id, title, cover, seasons, cast, summary}) => {
         clearErrors();
         $title.html(`<h1>${title}</h1>`);
-        
+
         $singleShowInfo.html(`
                 <div class="col-md-7">
                     <img src="${cover}" alt="" class="img-fluid poster">
@@ -95,13 +95,13 @@ const uiModule = (function () {
                     <div class="season">
                         <h2>Seasons (${seasons.length})</h2>
                         <ul>
-                            
+
                         </ul>
                     </div>
                     <div class="cast">
                         <h2>Cast</h2>
                         <ul>
-                            
+
                         </ul>
                     </div>
                 </div>
